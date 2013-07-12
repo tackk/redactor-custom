@@ -10,6 +10,8 @@
 	Usage: $('#content').redactor();
 */
 
+//Making some edits test
+
 (function($)
 {
 	var uuid = 0;
