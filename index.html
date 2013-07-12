@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Redactor override test</title>
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="redactor.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <script src="redactor.js"></script>
+    </head>
+    <body>
+        <div id="text">Tackk allows you to customize and edit your message the moment you visit the homepage. Simply click and start typing. There is no login required. It's just like tacking a flyer to a telephone pole. Tackk about that bike you have for sale. Tackk about your engagement and your big day. Tackk about your band's upcoming gig. Tackk about your family vacation. You can Tackk about anything. You control the look and feel of your Tackk, who to share it with, and even how long it lives. So what are you waiting for?</div>
+        <script>
+            $(function(){
+                $('#text').redactor({
+                    air: true,
+                    airButtons: ['bold', 'italic', 'unorderedlist', 'orderedlist', 'link'],
+                    allowedTags: ['p', 'h1', 'b', 'u', 'ul', 'ol', 'li', 'a', 'br'],
+                    emptyHtml: '<p>&#x200b;</p>'
+                });
+            });
+        </script>
+    </body>
+</html>
