@@ -10,6 +10,7 @@
 	Usage: $('#content').redactor();
 */
 
+//Test master branch
 (function($)
 {
 	var uuid = 0;
