@@ -1,24 +1,46 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Redactor override test</title>
-        <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-        <meta charset="utf-8">
-        <link rel="stylesheet" type="text/css" href="redactor.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-        <script src="redactor.js"></script>
-    </head>
-    <body>
-        <div id="text">Tackk allows you to customize and edit your message the moment you visit the homepage. Simply click and start typing. There is no login required. It's just like tacking a flyer to a telephone pole. Tackk about that bike you have for sale. Tackk about your engagement and your big day. Tackk about your band's upcoming gig. Tackk about your family vacation. You can Tackk about anything. You control the look and feel of your Tackk, who to share it with, and even how long it lives. So what are you waiting for?</div>
-        <script>
-            $(function(){
-                $('#text').redactor({
-                    air: true,
-                    airButtons: ['bold', 'italic', 'unorderedlist', 'orderedlist', 'link'],
-                    allowedTags: ['p', 'h1', 'b', 'u', 'ul', 'ol', 'li', 'a', 'br'],
-                    emptyHtml: '<p>&#x200b;</p>'
-                });
-            });
-        </script>
-    </body>
+<head>
+	<title>Redactor</title>
+
+	<meta charset="utf-8">
+
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+
+	<!-- Redactor is here -->
+	<link rel="stylesheet" href="redactor/redactor.css" />
+	<script src="redactor/redactor.min.js"></script>
+
+	<script type="text/javascript">
+	$(function()
+	{
+		$('#redactor').redactor({
+			focus: true
+		});
+	});
+	</script>
+</head>
+<body>
+	<div id="page">
+		<textarea id="redactor" name="content">
+			<h2>Hello and Welcome</h2>
+			<p>Lorem ipsum <a href="http://test.com" title="dolor">dolor</a> sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing <b>elit, sed do eiusmod tempor incididunt</b> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</textarea>
+		<br>
+		<h3>See other demos</h3>
+		<ul class="list">
+			<li><a href="demo/images_upload.html">Images upload</a></li>
+			<li><a href="demo/images_json.html">Images JSON</a></li>
+			<li><a href="demo/files_upload.html">Files upload</a></li>
+			<li><a href="demo/all_uploads.html">All in one uploads</a></li>
+			<li><a href="demo/autosave.html">Autosave utility</a></li>
+			<li><a href="demo/fixed.html">Fixed toolbar</a></li>
+			<li><a href="demo/post.html">Post form</a></li>
+		</ul>
+
+	</div>
+</body>
 </html>
